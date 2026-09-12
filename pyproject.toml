@@ -52,3 +52,8 @@ minversion = "8.0"
 testpaths = ["tests"]
 pythonpath = ["src"]
 addopts = "-v --strict-markers"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+]
