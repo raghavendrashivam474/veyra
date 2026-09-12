@@ -1,0 +1,95 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C/Rust extensions build artifacts
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables & secrets
+.env*
+!.env.example
+*.pem
+*.key
+*.cert
+*.secret
+credentials.json
+
+# IDEs and Editors
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Testing & Coverage
+.coverage
+.coverage.*
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+nosetests.xml
+
+# Linters & Type Checking
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+
+# Runtime Data (CRITICAL: Reference images, private assets, embeddings, local databases)
+data/database/*.db
+data/database/*.sqlite
+data/database/*.sqlite3
+data/assets/*
+!data/assets/.gitkeep
+data/references/*
+!data/references/.gitkeep
+data/experiments/*
+!data/experiments/.gitkeep
+data/models/*
+!data/models/.gitkeep
+
+# Machine Learning / AI model artifacts & caches
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+*.ckpt
+*.h5
+.cache/
+huggingface/
+torch_cache/
