@@ -1,3 +1,11 @@
+"""Architectural boundary enforcement tests.
+
+Enforces clean dependency boundaries:
+- Domain must not import Infrastructure, Application, or API.
+- Application must not import Infrastructure or API, or external DB/ML drivers.
+- Core must not depend on Domain, Application, Infrastructure, or API.
+"""
+
 import ast
 from pathlib import Path
 
@@ -10,10 +18,20 @@ BOUNDARY_RULES = {
         "veyra.infrastructure",
         "veyra.application",
         "veyra.api",
+        "sqlalchemy",
+        "sqlite3",
+        "torch",
+        "transformers",
+        "cv2",
     ],
     "application": [
         "veyra.infrastructure",
         "veyra.api",
+        "sqlalchemy",
+        "sqlite3",
+        "torch",
+        "transformers",
+        "cv2",
     ],
     "core": [
         "veyra.domain",
@@ -46,7 +64,7 @@ def analyze_imports(file_path: Path) -> list[str]:
     return imports
 
 
-def test_architectural_boundaries():
+def test_architectural_boundaries() -> None:
     """Enforces boundaries and strict dependency inversion."""
     root_dir = Path(__file__).parent.parent.parent
     src_dir = root_dir / "src" / "veyra"
@@ -66,7 +84,7 @@ def test_architectural_boundaries():
 
             for imp in imported_modules:
                 for forbidden in forbidden_targets:
-                    if imp.startswith(forbidden):
+                    if imp == forbidden or imp.startswith(f"{forbidden}."):
                         violations.append(
                             f"Rule Violation in '{relative_file_path}': "
                             f"Layer '{layer}' cannot depend on '{forbidden}' (imported: '{imp}')"
