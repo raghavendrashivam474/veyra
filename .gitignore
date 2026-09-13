@@ -93,3 +93,10 @@ data/models/*
 .cache/
 huggingface/
 torch_cache/
+
+# S1 Research Data (images and experiment outputs)
+data/references/
+data/experiments/
+!data/references/.gitkeep
+!data/references/s1/.gitkeep
+!data/experiments/.gitkeep
