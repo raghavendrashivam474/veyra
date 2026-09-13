@@ -63,8 +63,7 @@ This is enforced by tests/architecture/test_boundaries.py.
 ```Python
 class PerceptionEngine(ABC):
     @abstractmethod
-    def observe(self, reference: Reference, traits: list[TraitName]) -> list[Observation]:
-        ...
+    def observe(self, reference: Reference, traits: list[TraitName]) -> list[Observation]: ...
 ```
 - Location: application/ports/perception.py
 - Purpose: Abstract contract for any visual perception model (VLM, face analyzer, etc.)
