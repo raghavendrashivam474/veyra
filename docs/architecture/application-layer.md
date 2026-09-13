@@ -4,8 +4,7 @@
 
 The Application layer orchestrates workflows between the Veyra Domain Model and future external systems (e.g. databases, VLMs, image generators).
 ```text
-
-            API / CLI / UI
+    API / CLI / UI
                   │
                   ▼
           APPLICATION LAYER
