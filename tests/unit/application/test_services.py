@@ -1,12 +1,6 @@
 """Unit tests for Veyra application services."""
 
 import pytest
-from veyra.application.services.character_service import CharacterService
-from veyra.application.services.perception_service import PerceptionService
-from veyra.application.services.representation_service import RepresentationService
-from veyra.domain.ids import CharacterId, ReferenceId
-from veyra.domain.reference import Reference, ReferenceSourceType
-from veyra.domain.traits import TraitName
 
 from tests.fixtures.fakes import (
     FakePerceptionEngine,
@@ -14,6 +8,12 @@ from tests.fixtures.fakes import (
     InMemoryObservationRepository,
     InMemoryReferenceRepository,
 )
+from veyra.application.services.character_service import CharacterService
+from veyra.application.services.perception_service import PerceptionService
+from veyra.application.services.representation_service import RepresentationService
+from veyra.domain.ids import CharacterId, ReferenceId
+from veyra.domain.reference import Reference, ReferenceSourceType
+from veyra.domain.traits import TraitName
 
 
 class TestCharacterService:

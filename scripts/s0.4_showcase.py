@@ -12,6 +12,12 @@ repo_root = Path(__file__).resolve().parent.parent
 if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
 
+from tests.fixtures.fakes import (  # noqa: E402
+    FakePerceptionEngine,
+    InMemoryCharacterRepository,
+    InMemoryObservationRepository,
+    InMemoryReferenceRepository,
+)
 from veyra.application.services.character_service import CharacterService  # noqa: E402
 from veyra.application.services.perception_service import PerceptionService  # noqa: E402
 from veyra.application.services.representation_service import (  # noqa: E402
@@ -20,13 +26,6 @@ from veyra.application.services.representation_service import (  # noqa: E402
 from veyra.domain.ids import ReferenceId  # noqa: E402
 from veyra.domain.reference import Reference, ReferenceSourceType  # noqa: E402
 from veyra.domain.traits import TraitName  # noqa: E402
-
-from tests.fixtures.fakes import (  # noqa: E402
-    FakePerceptionEngine,
-    InMemoryCharacterRepository,
-    InMemoryObservationRepository,
-    InMemoryReferenceRepository,
-)
 
 
 def main() -> int:

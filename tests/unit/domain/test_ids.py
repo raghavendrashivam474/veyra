@@ -1,6 +1,7 @@
 """Tests for Veyra domain identifiers."""
 
 import pytest
+
 from veyra.domain.ids import CharacterId, ObservationId, ReferenceId
 
 

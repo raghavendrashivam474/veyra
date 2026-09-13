@@ -1,6 +1,7 @@
 """Tests for Veyra domain entities and aggregates."""
 
 import pytest
+
 from veyra.domain.character import Character
 from veyra.domain.ids import CharacterId, ObservationId, ReferenceId
 from veyra.domain.observations import Observation

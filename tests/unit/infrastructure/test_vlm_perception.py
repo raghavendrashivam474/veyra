@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import pytest
+
 from veyra.domain.ids import ReferenceId
 from veyra.domain.reference import Reference, ReferenceSourceType
 from veyra.domain.traits import TraitName
