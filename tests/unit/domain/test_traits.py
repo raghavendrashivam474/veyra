@@ -1,6 +1,7 @@
 """Tests for Veyra domain trait value objects."""
 
 import pytest
+
 from veyra.domain.traits import Confidence, TraitName, TraitValue
 
 
